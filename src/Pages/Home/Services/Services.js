@@ -23,7 +23,9 @@ const Services = () => {
                      key={service._id} service={service}>
                     </ServiceCard>)
                 }
-
+            </div>
+            <div className='my-10 text-center'>
+            <button className="btn btn-outline btn-warning">More Services</button>
             </div>
         </div>
     );
