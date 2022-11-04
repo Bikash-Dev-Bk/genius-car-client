@@ -1,0 +1,27 @@
+[
+    {
+        "_id": "1001",
+        "title": "Expert Team",
+        "img": "https://i.ibb.co/ZNCmVpp/3.jpg"
+    },
+    {
+        "_id": "1003",
+        "title": "24/7 Support",
+        "img": "https://i.ibb.co/ZNCmVpp/3.jpg"
+    },
+    {
+        "_id": "1004",
+        "title": "Best Equipment",
+        "img": "https://i.ibb.co/ZNCmVpp/3.jpg"
+    },
+    {
+        "_id": "1005",
+        "title": "100% Guarantee",
+        "img": "https://i.ibb.co/ZNCmVpp/3.jpg"
+    },
+    {
+        "_id": "1006",
+        "title": "Timely Delivery",
+        "img": "https://i.ibb.co/ZNCmVpp/3.jpg"
+    }
+]
