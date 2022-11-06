@@ -5,6 +5,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 const CheckOut = () => {
     const { _id, title, price} = useLoaderData();
     const { user } = useContext(AuthContext);
+    // console.log(user);
 
     const handlePlaceOrder = event => {
         event.preventDefault();
@@ -23,11 +24,32 @@ const CheckOut = () => {
             phone,
             message
         }
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.acknowledged){
+                    alert('Order placed successfully')
+                    form.reset();
+                    
+                }
+            })
+            .catch(er => console.error(er));
+
     }
     return (
         <div>
             <form onSubmit={handlePlaceOrder}>
                 <h2 className="text-4xl">You are about to order: {title}</h2>
+                {/* {user?.email} */}
+                
                 <h4 className="text-3xl">Price: {price}</h4>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />
