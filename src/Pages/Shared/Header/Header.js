@@ -15,14 +15,22 @@ const Header = () => {
 
     const menuItems = <>
         <li className="font-semibold"><Link to='/'>Home</Link></li>
+        
         {
           user?.email ?
+          <>
           <li className="font-semibold"><Link to='/orders'>Orders</Link></li>
+          <li className="font-semibold" onClick={handleLogOut} ><Link to='/login'>Log Out</Link></li>
+          
+          </>
           :
+          <>
           <li className="font-semibold"><Link to='/login'>Log in</Link></li>
+          <li className="font-semibold"><Link to='/signup'>Sign up</Link></li>
+          </>
         }
-        <li className="font-semibold"><Link to='/signup'>Sign up</Link></li>
-        <li className="font-semibold" onClick={handleLogOut} ><Link to='/login'>Log Out</Link></li>
+        
+        
     </>
 
   return (
